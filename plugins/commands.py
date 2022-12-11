@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖 𝚄𝚙𝚍𝚊𝚝𝚎𝚜', url='https://t.me/sources_cods')
+                InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/FilmyFather_Botlist')
             ],
             [
                 InlineKeyboardButton('ℹ️ 𝙷𝚎𝚕𝚙', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -42,13 +42,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ 𝙰𝚍𝚍 𝙼𝚎 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙶𝚛𝚘𝚞𝚙𝚜 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ 𝐀𝐝𝐝 𝐌𝐞 𝐈𝐧 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 𝚂𝚎𝚊𝚛𝚌𝚑', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 𝚄𝚙𝚍𝚊𝚝𝚎𝚜', url='https://t.me/sources_cods')
+            InlineKeyboardButton('🔍 𝐒𝐞𝐚𝐫𝐜𝐡', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🤖 𝐔𝐩𝐝𝐚𝐭𝐞𝐬', url='https://t.me/RequestingHuB')
             ],[
-            InlineKeyboardButton('ℹ️ 𝙷𝚎𝚕𝚙', callback_data='help'),
-            InlineKeyboardButton('😊 𝙰𝚋𝚘𝚞𝚝', callback_data='about')
+            InlineKeyboardButton('ℹ️ 𝐇𝐞𝐥𝐩', callback_data='help'),
+            InlineKeyboardButton('😊 𝐀𝐛𝐨𝐮𝐭', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -62,12 +62,12 @@ async def start(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         except ChatAdminRequired:
-            logger.error("Make sure Bot is admin in Forcesub channel")
+            logger.error("𝐌𝐚𝐤𝐞 𝐒𝐮𝐫𝐞 𝐁𝐨𝐭 𝐈𝐬 𝐀𝐝𝐦𝐢𝐧 𝐢𝐧 𝐅𝐨𝐫𝐜𝐞𝐬𝐮𝐛 𝐂𝐡𝐚𝐧𝐧𝐞𝐥")
             return
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                    "🤖 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥", url=invite_link.invite_link
                 )
             ]
         ]
@@ -76,25 +76,25 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton(" 🔄 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton(" 🔄 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="**𝐏𝐥𝐞𝐚𝐬𝐞 𝐉𝐨𝐢𝐧 𝐌𝐲 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐭𝐨 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬 𝐁𝐨𝐭!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕ 𝙰𝚍𝚍 𝙼𝚎 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙶𝚛𝚘𝚞𝚙𝚜 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ 𝐀𝐝𝐝 𝐌𝐞 𝐈𝐧 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 𝚂𝚎𝚊𝚛𝚌𝚑', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 𝚄𝚙𝚍𝚊𝚝𝚎𝚜', url='https://t.me/sources_cods')
+            InlineKeyboardButton('🔍 𝐒𝐞𝐚𝐫𝐜𝐡', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🤖 𝐔𝐩𝐝𝐚𝐭𝐞𝐬', url='https://t.me/sources_cods')
             ],[
-            InlineKeyboardButton('ℹ️ 𝙷𝚎𝚕𝚙', callback_data='help'),
-            InlineKeyboardButton('😊 𝙰𝚋𝚘𝚞𝚝', callback_data='about')
+            InlineKeyboardButton('ℹ️ 𝐇𝐞𝐥𝐩', callback_data='help'),
+            InlineKeyboardButton('😊 𝐀𝐛𝐨𝐮𝐭', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -292,9 +292,9 @@ async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
     if reply and reply.media:
-        msg = await message.reply("Processing...⏳", quote=True)
+        msg = await message.reply("𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠...⏳", quote=True)
     else:
-        await message.reply('Reply to file with /delete which you want to delete', quote=True)
+        await message.reply('𝐑𝐞𝐩𝐥𝐲 𝐭𝐨 𝐟𝐢𝐥𝐞 𝐰𝐢𝐭𝐡 /𝐝𝐞𝐥𝐞𝐭𝐞 𝐰𝐡𝐢𝐜𝐡 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐝𝐞𝐥𝐞𝐭𝐞', quote=True)
         return
 
     for file_type in ("document", "video", "audio"):
@@ -302,7 +302,7 @@ async def delete(bot, message):
         if media is not None:
             break
     else:
-        await msg.edit('This is not supported file format')
+        await msg.edit('𝐓𝐡𝐢𝐬 𝐢𝐬 𝐧𝐨𝐭 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐟𝐢𝐥𝐞 𝐟𝐨𝐫𝐦𝐚𝐭')
         return
     
     file_id, file_ref = unpack_new_file_id(media.file_id)
@@ -311,7 +311,7 @@ async def delete(bot, message):
         '_id': file_id,
     })
     if result.deleted_count:
-        await msg.edit('File is successfully deleted from database')
+        await msg.edit('𝐅𝐢𝐥𝐞 𝐢𝐬 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐅𝐫𝐨𝐦 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞')
     else:
         file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
         result = await Media.collection.delete_many({
@@ -320,7 +320,7 @@ async def delete(bot, message):
             'mime_type': media.mime_type
             })
         if result.deleted_count:
-            await msg.edit('File is successfully deleted from database')
+            await msg.edit('𝐅𝐢𝐥𝐞 𝐢𝐬 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐅𝐫𝐨𝐦 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞')
         else:
             # files indexed before https://github.com/8769ANURAG/EvaMaria/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
             # have original file name.
@@ -330,9 +330,9 @@ async def delete(bot, message):
                 'mime_type': media.mime_type
             })
             if result.deleted_count:
-                await msg.edit('File is successfully deleted from database')
+                await msg.edit('𝐅𝐢𝐥𝐞 𝐢𝐬 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐅𝐫𝐨𝐦 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞')
             else:
-                await msg.edit('File not found in database')
+                await msg.edit('𝐅𝐢𝐥𝐞 𝐍𝐨𝐭 𝐅𝐨𝐮𝐧𝐝 𝐈𝐧 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞')
 
 
 @Client.on_message(filters.command('deleteall') & filters.user(ADMINS))
@@ -343,12 +343,12 @@ async def delete_all_index(bot, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="YES", callback_data="autofilter_delete"
+                        text="𝐘𝐄𝐒", callback_data="autofilter_delete"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        text="CANCEL", callback_data="close_data"
+                        text="𝐂𝐀𝐍𝐂𝐄𝐋", callback_data="close_data"
                     )
                 ],
             ]
@@ -360,11 +360,11 @@ async def delete_all_index(bot, message):
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
-    await message.answer('Piracy Is Crime')
-    await message.message.edit('Succesfully Deleted All The Indexed Files.')
+    await message.answer('𝐏𝐢𝐫𝐚𝐜𝐲 𝐈𝐬 𝐂𝐫𝐢𝐦𝐞')
+    await message.message.edit('𝐒𝐮𝐜𝐜𝐞𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐀𝐥𝐥 𝐓𝐡𝐞 𝐈𝐧𝐝𝐞𝐱𝐞𝐝 𝐅𝐢𝐥𝐞𝐬.')
 
 
-@Client.on_message(filters.command('settings'))
+@Client.on_message(filters.command('𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬'))
 async def settings(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
@@ -379,10 +379,10 @@ async def settings(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
+                await message.reply_text("𝐌𝐚𝐤𝐞 𝐒𝐮𝐫𝐞 𝐈'𝐦 𝐏𝐫𝐞𝐬𝐞𝐧𝐭 𝐈𝐧 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩!!", quote=True)
                 return
         else:
-            await message.reply_text("I'm not connected to any groups!", quote=True)
+            await message.reply_text("𝐈'𝐦 𝐍𝐨𝐭 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝 𝐓𝐨 𝐀𝐧𝐲 𝐆𝐫𝐨𝐮𝐩𝐬!", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
