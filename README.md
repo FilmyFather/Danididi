@@ -6,13 +6,13 @@
 </h1>
 
 
-[![Stars](https://img.shields.io/github/stars/AM-ROBOTS/EvaMaria?style=flat-square&color=yellow)](https://github.com/AM-ROBOTS/EvaMaria/stargazers)
-[![Forks](https://img.shields.io/github/forks/AM-ROBOTS/EvaMaria?style=flat-square&color=orange)](https://github.com/AM-ROBOTS/EvaMaria/fork)
-[![Size](https://img.shields.io/github/repo-size/AM-ROBOTS/EvaMaria?style=flat-square&color=green)](https://github.com/AM-ROBOTS/EvaMaria/)   
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/AM-ROBOTS/EvaMaria)   
+[![Stars](https://img.shields.io/github/stars/FilmyFather/EvaMaria?style=flat-square&color=yellow)](https://github.com/FilmyFather/Danididi/stargazers)
+[![Forks](https://img.shields.io/github/forks/FilmyFather/EvaMaria?style=flat-square&color=orange)](https://github.com/FilmyFather/Danididi/fork)
+[![Size](https://img.shields.io/github/repo-size/FilmyFather/EvaMaria?style=flat-square&color=green)](https://github.com/FilmyFather/Danididi/)   
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/FilmyFather/Danididi)   
 [![Contributors](https://img.shields.io/github/contributors/AM-ROBOTS/EvaMaria?style=flat-square&color=green)](https://github.com/AM-ROBOTS/EvaMaria/graphs/contributors)
-[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/AM-ROBOTS/EvaMaria/blob/main/LICENSE)
-[![Sparkline](https://stars.medv.io/8769ANURAG/EvaMaria.svg)](https://stars.medv.io/AM-ROBOTS/EvaMaria)
+[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/FilmyFather/Danididi/blob/main/LICENSE)
+[![Sparkline](https://stars.medv.io/8769ANURAG/EvaMaria.svg)](https://stars.medv.io/FilmyFather/Danididi)
 
 
 ## Features
@@ -52,7 +52,7 @@ Read [this](https://telegram.dog/Sources_cods) before you start messing up with 
 ## Deploy
 You can deploy this bot anywhere.
 
-[![Deploy](https://cdn.scalingo.com/deploy/button.svg)](https://dashboard.scalingo.com/create/app?source=https://github.com/AM-ROBOTS/EvaMaria)
+[![Deploy](https://cdn.scalingo.com/deploy/button.svg)](https://dashboard.scalingo.com/create/app?source=https://github.com/FilmyFather/Danididi)
 
 
 <i>**[Watch Deploying Tutorial...](https://youtu.be/Miajl2amrKo)**</i>
@@ -69,7 +69,7 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To VPS</summary>
 <p>
 <pre>
-git clone https://github.com/AM-ROBOTS/EvaMaria
+git clone https://github.com/FilmyFather/Danididi
 # Install Packages
 pip3 install -U -r requirements.txt
 Edit info.py with variables as given below then run bot
@@ -108,11 +108,11 @@ python3 bot.py
 • /link - to create link for one post
 ```
 ## Support
-[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/Technical_Help_Support_Bot)
-[![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/sources_cods)
+[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/FilmyFather_Bot)
+[![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/Yuvi_4502)
 
 ## Credits 
-* [![EvaMaria-Devs](https://img.shields.io/static/v1?label=EvaMaria&message=devs&color=critical)](https://telegram.dog/AM_ROBOTS)
+* [![EvaMaria-Devs](https://img.shields.io/static/v1?label=EvaMaria&message=devs&color=critical)](https://telegram.dog/RequestingHuB)
 
 
 ## Thanks to 
